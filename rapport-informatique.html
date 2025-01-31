@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>صور وتقارير</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #4e8dcc;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(to bottom, #003366, #006699);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      padding: 30px;
+      max-width: 1200px;
+      width: 80%;
+      text-align: center;
+      color: white;
+    }
+
+    .report {
+      margin-bottom: 40px;
+      max-width: 700px;
+    }
+
+    .report h3 {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .report p {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #ffffff;
+    }
+
+    .images {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+    }
+
+    .image-card {
+      width: 250px;
+      height: 250px;
+      margin: 10px;
+      background: #006699;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .image-card:hover {
+      transform: scale(1.05);
+    }
+
+    .image-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="report">
+      <p style="text-align: justify;">Le samedi 30 novembre 2024, le club d’informatique a organisé un atelier interactif de formation au logiciel scratch. Les élèves du tronc commun ont suivi cette formation qui s’inscrit dans le cadre de la Semaine Africaine du Code et qui a pour objectif de familiariser les élèves à l’interface de Scratch et à leur inculquer les compétences essentielles en codage, désormais indispensables dans le monde moderne. Lors de cette activité, les apprenants ont reçu une présentation globale du programme Scratch. Par la suite, ils ont eu l’occasion de démontrer leur créativité en concevant des mini-projets personnels et innovants en montrant un intérêt croissant pour les technologies. Cet atelier a été encadré par la professeur Mme Loubna ABIDA.
+        </p>
+        <div class= "tittle"><h3> Hanan BOUAOUAD</h3> </div>
+    </div>
+    
+
+    <div class="images">
+      <div class="image-card">
+        <img src="photo/didi.jpg" alt="صورة 1">
+      </div>
+      <div class="image-card">
+        <img src="photo/taha.jpg" alt="صورة 2">
+      </div>
+      <div class="image-card">
+        <img src="photo/hanan.jpg" alt="صورة 3">
+      </div>
+    </div>
+  </div>
+</body>
+</html>

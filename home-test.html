@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lycée Mohammed Ezzarktouni</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(to bottom, #062645, #062645);
+            color: #000000;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            cursor: pointer;
+            background-image: url("");
+        }
+
+        .header {
+            background: #075c8d;
+            padding: 25px 30px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .header h1 {
+            font-size: 35px;
+            color: #ffffff;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .nave {
+            display: flex;
+            justify-content: center;
+            background: #57a77300;
+            border-radius: 15px;
+            padding: 10px 0;
+            border-radius: 50px;
+            margin-bottom: 20px;
+            position: absolute;
+        }
+        
+        .nave a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        
+        .nave a:hover {
+            color: #062645;
+        }
+        
+        
+        .buttons-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 20px;
+            position: relative;
+            top: -10px;
+        }
+
+        .about-btn,
+        .about-btn2,
+        .about-btn3 {
+            background-color: #1C5F8C;
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .about-btn:hover,
+        .about-btn2:hover,
+        .about-btn3:hover {
+            background-color: #447BA0;
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .about-btn:active,
+        .about-btn2:active,
+        .about-btn3:active {
+            transform: translateY(2px);
+        }
+
+        /* Conteneur principal avec flexbox */
+        .content {
+            display: flex;
+            gap: 50px;
+            padding: 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+            background: linear-gradient(to bottom, #447BA0, #054F80);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            border-radius: 12px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+
+        /* Section Edito */
+        .news-item {
+            flex: 1;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .news-item h2 {
+            font-size: 22px;
+            color: #252525;
+            margin-bottom: 10px;
+        }
+
+        .news-item p {
+            font-size: 16px;
+            color: #3a3a3a;
+            line-height: 1.6;
+        }
+
+        /* Section Photos */
+        .photo-gallery {
+            flex: 1;
+            text-align: left;
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .carousel-image {
+            width: 100%;
+            max-width: 100%;
+            transition: transform 0.5s ease-in-out;
+            display: block;
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 50%;
+            z-index: 1000;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .carousel-button:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        /* Footer */
+        .footer {
+            background: #5587A9;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            color: #fcf8f8;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .footer a {
+            color: #fcfbfb;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsivité */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+
+            .carousel-container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Lycée qualifiant Mohammed Zerktouni</h1>
+    </div>
+
+    <div class="nav">
+        <a href="A-prpos-du-lycée.html">A propos du lycée</a>
+        <a href="last-nwes.html">Actualités</a>
+        <a href="Clubs.html">Clubs</a>
+        <a href="contacter-nous.html">Nous Contacter</a>
+        <a href="">Radio Scolaire</a>
+        <a href="tv.html">TV ZERKTOUNI</a>
+    </div>
+<style>
+            .nav {
+            text-align: center;
+            position: relative;
+        }
+        
+        .nav a {
+            color: #fff;
+            font-size: 18px;
+            text-decoration: none;
+            padding: 12px 25px;
+            margin: 0 20px;
+       border-radius: 5px;
+            display: inline-block;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+        
+        .nav a:hover {
+           background: #063154;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.333);
+        }
+        
+        .nav a:active {
+            transform: translateY(2px);
+            background: #063154;
+        }
+        
+        .nav:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #063154;
+        
+            z-index: -1;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.2;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0.2;
+            }
+        }
+</style>
+    <!-- Contenu principal -->
+    <div class="content">
+        <!-- Edito Section -->
+        <div class="news-item">
+            <h2>Edito</h2>
+            <p>Chers camarades ;</p>
+            <p style="text-align: justify;">Bienvenue sur notre site du lycée qualifiant Mohammed Zerktouni. Nous sommes ravis de vous présenter et de vous partager en quelques lignes notre journal réalisées par nos élèves et encadrées par notre professeure de français Mme. Loubna Abida. Notre objectif est de vous informer sur les diverses activités (éducatives, culturelles, environnementales, sanitaires et sportives) organisées par nos clubs.</p>
+        </div>
+
+        <!-- Photos Section -->
+        <div class="photo-gallery">
+            <div class="carousel-container">
+                <div class="carousel">
+                    <img id="slide-image" src="photo-home/DSC07311.JPG" alt="Photo 1" class="carousel-image">
+                </div>
+                <button class="carousel-button prev" onclick="prevSlide()">&#10094;</button>
+                <button class="carousel-button next" onclick="nextSlide()">&#10095;</button>
+            </div>
+            <div id="slide-text">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Script pour le carrousel -->
+    <script>
+        let slides = [
+            { image: "photo-home/DSC07253.JPG", text: "" },
+            { image: "photo-home/DSC07259.JPG", text: "" },
+            { image: "photo-home/DSC07286 - Copie.JPG", text: "" }
+        ];
+        let currentIndex = 0;
+        function showSlide(index) {
+            document.getElementById("slide-image").src = slides[index].image;
+            document.getElementById("slide-text").innerHTML = `<p>${slides[index].text}</p>`;
+        }
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            showSlide(currentIndex);
+        }
+        setInterval(nextSlide, 4000); // Changer toutes les 4 secondes
+    </script>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2025 Lycée Mohammed Zerktouni. Tous droits réservés.</p>
+    </div>
+</body>
+
+</html>

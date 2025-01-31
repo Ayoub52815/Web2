@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lycée Mohammed Ezzarktouni</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(to bottom, #062645, #062645);
+            color: #000000;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            cursor: pointer;
+        }
+        
+        .header {
+            background: #075c8d;
+            /* خلفية بلون أخضر */
+            padding: 25px 30px;
+            /* زيادة التباعد داخل العنصر */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+            /* الظل أصبح أكثر وضوحًا */
+            text-align: center;
+            /* جعل الحواف أكثر انحناء */
+            margin-top: 30px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            /* إضافة تأثير عند التفاعل */
+        }
+        
+        .header h1 {
+            font-size: 35px;
+            /* تكبير حجم النص */
+            color: #ffffff;
+            /* الحفاظ على اللون الأبيض */
+            font-weight: 600;
+            /* جعل الخط أكثر سمكًا */
+            letter-spacing: 1px;
+            /* إضافة تباعد بين الحروف */
+            text-transform: uppercase;
+            /* تحويل النص إلى أحرف كبيرة */
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: center;
+            background: #57a77300;
+            border-radius: 15px;
+            padding: 10px 0;
+            border-radius: 50px;
+            margin-bottom: 20px;
+            position: absolute;
+        }
+        
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        
+        .nav a:hover {
+            color: #062645;
+        }
+        
+        .buttons-container {
+            display: flex;
+            justify-content: flex-start;
+            /* محاذاة الأزرار إلى اليسار */
+            align-items: center;
+            /* محاذاة الأزرار عمودياً في المنتصف */
+            gap: 20px;
+            /* مسافة بين الأزرار */
+            position: relative;
+            top: -10px;
+        }
+        
+        .about-btn,
+        .about-btn2,
+        .about-btn3 {
+            background-color: #1C5F8C;
+            /* اللون الأساسي للأزرار */
+            color: #fff;
+            padding: 12px 24px;
+            /* زيادة المسافة داخل الأزرار */
+            border: none;
+            border-radius: 30px;
+            /* حواف مدورة بشكل أكبر */
+            font-size: 16px;
+            /* حجم الخط */
+            font-weight: 600;
+            /* سمك الخط */
+            text-align: center;
+            /* محاذاة النص في المنتصف */
+            cursor: pointer;
+            transition: all 0.3s ease;
+            /* تأثيرات التفاعل */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            /* تحسين الظل */
+            display: inline-block;
+            text-transform: uppercase;
+            /* تحويل النص إلى أحرف كبيرة */
+            letter-spacing: 1px;
+            /* زيادة التباعد بين الحروف */
+        }
+        /* تأثيرات hover */
+        
+        .about-btn:hover,
+        .about-btn2:hover,
+        .about-btn3:hover {
+            background-color: #447BA0;
+            /* تغيير اللون عند التفاعل */
+            transform: translateY(-5px);
+            /* رفع الزر عند المرور عليه */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+            /* تأثير الظل عند التفاعل */
+        }
+        
+        .about-btn:active,
+        .about-btn2:active,
+        .about-btn3:active {
+            transform: translateY(2px);
+            /* عند الضغط على الزر، يعود الزر للأسفل */
+        }
+        
+        .content {
+            padding: 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+            background: linear-gradient(to bottom, #447BA0, #054F80);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            /* ظل لطيف لإبراز المحتوى */
+            border-radius: 12px;
+            /* حواف دائرية لتعزيز الأناقة */
+            overflow: hidden;
+            /* لتجنب تسلل المحتوى من الحواف */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            /* نص بلون داكن لتحسين وضوح القراءة */
+        }
+        
+        .content h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #3d3c3c;
+            /* لون داكن وأكثر وضوحًا */
+            font-weight: 700;
+        }
+        
+        .content p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            /* لون نص لطيف */
+        }
+        
+        @media (max-width: 768px) {
+            .search-bar button {
+                width: 50%;
+                /* في الشاشات الصغيرة، يمكن تكبير الزر */
+            }
+            .content {
+                padding: 20px;
+            }
+        }
+        
+        .news-item {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+        .news-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .news-item h2 {
+            font-size: 22px;
+            color: #252525;
+            margin-bottom: 10px;
+        }
+        
+        .news-item p {
+            font-size: 16px;
+            color: #3a3a3a;
+            line-height: 1.6;
+        }
+        
+        .footer {
+            background: #5587A9;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            color: #fcf8f8;
+            border-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .footer p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .footer a {
+            color: #fcfbfb;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+        
+        .modal-content {
+            background: #333333;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            text-align: center;
+        }
+        
+        .modal-content h2 {
+            margin-bottom: 15px;
+        }
+        
+        .modal-content p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        
+        .close-btn {
+            padding: 10px 20px;
+            background-color: #2CCED2;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .close-btn:hover {
+            background-color: #2CCED2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Lycée qualifiant Mohammed zerktouni</h1>
+    </div>
+    <!-- الشريط التنقل -->
+    <div class="nav">
+        <a href="A-prpos-du-lycée.html">A propos du lycée</a>
+        <a href="last-nwes.html">Actualités</a>
+        <a href="Clubs.html">Clubs</a>
+        <a href="">Nous Contacter</a>
+        <a href="">Radio Scolaire</a>
+        <a href="">TV ZERKTOUNI</a>
+    </div>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        .nav {
+            text-align: center;
+            position: relative;
+        }
+        
+        .nav a {
+            color: #fff;
+            font-size: 18px;
+            text-decoration: none;
+            padding: 12px 25px;
+            margin: 0 20px;
+            border-radius: 30px;
+            display: inline-block;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+        
+        .nav a:hover {
+            background-color: rgba(238, 228, 228, 0.224);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.333);
+        }
+        
+        .nav a:active {
+            transform: translateY(2px);
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+        
+        .nav:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0);
+            border-radius: 10px;
+            z-index: -1;
+            animation: pulse 2s infinite ease-in-out;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.2;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0.2;
+            }
+        }
+    </style>
+
+    <!-- محتوى الأخبار -->
+    <div class="content">
+        <div class="news-item">
+            <h2>Edito</h2>
+            <p>Chers camarades ;</p>
+            <p>Bienvenue sur notre site du lycée qualifiant Mohammed Zerktouni. Nous sommes ravis de vous présenter et de vous partager en quelques lignes notre journal réalisées par nos élèves et encadrées par notre professeure de français Mme. loubna Abida
+                .Notre objectif est de vous informer sur les diverses activités (éducatives, culturelles, environnementales, sanitaires et sportives) organisées par nos clubs.</p>
+
+        </div>
+
+       
+
+
+
+        <style>
+            body {
+                font-family: 'Arial', sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f9f9f9;
+            }
+            
+            .options {
+                position: fixed;
+                bottom: 95px;
+                right: 25px;
+                display: none;
+                flex-direction: column;
+                gap: 12px;
+                animation: fadeIn 0.4s ease;
+            }
+            
+            .option {
+                background: #fff;
+                color: #333;
+                padding: 12px 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+                font-size: 14px;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+            
+            .option:hover {
+                background: #f1f5fb;
+                transform: translateY(-4px);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            }
+            
+            .floating-button.active.options {
+                display: flex;
+            }
+            
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(15px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        </style>
+        <!-- تذييل الصفحة -->
+        <div class="footer">
+            <header>Rejoingnez-nous</header>
+            <a href="https://www.facebook.com/share/15wGWx28WN/">Facebook</a>
+            <a href="https://x.com/ZerktouniM9153">x</a>
+            <a href="ccc">Instagram</a>
+            <header>copyrith &copy; 2025 - Lycée Mohammed Zerktouni</header>
+        </div>
+
+        <!-- Modal (حول الموقع) -->
+        <div id="aboutModal" class="modal">
+            <div class="modal-content">
+                <h2>A propos du lycée</h2>
+                <p>Le Lycée qualifiant Mohammed Zerktouni situé à la commune Jorf El Melha ; est un établissement public d’enseignement général, appartenant à l'académie Rabat-salé-Kenitra, direction provinciale de Sidi Kacem. Comme de nombreux autres établissements
+                    scolaires du pays, Le Lycée porte le nom d’une personne emblématique de la résistance marocaine. En effet, Mohammed Zerktouni était reconnu pour son intelligence et son courage dans l'organisation d'opérations militaires. En outre,
+                    la journée nationale de la résistance coïncidait avec l’anniversaire de sa mort le 18 juin. Notre lycée a une bonne réputation grâce à son corps administratif et éducatif qui opte pour une éducation inclusive et de qualité pour tous.
+                </p>
+ 
+</html>

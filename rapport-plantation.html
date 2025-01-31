@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>صور وتقارير</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #4e8dcc;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(to bottom, #003366, #006699);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      padding: 30px;
+      max-width: 1200px;
+      width: 80%;
+      text-align: center;
+      color: white;
+    }
+
+    .report {
+      margin-bottom: 40px;
+      max-width: 700px;
+    }
+
+    .report h3 {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .report p {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #ffffff;
+    }
+
+    .images {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+    }
+
+    .image-card {
+      width: 250px;
+      height: 250px;
+      margin: 10px;
+      background: #006699;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .image-card:hover {
+      transform: scale(1.05);
+    }
+
+    .image-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="report">
+      <p style="text-align: justify;">Le 22 janvier 2025, sous l'encadrement de notre professeure Mme Loubna Abida, nous avons participé à une activité éducative sous le thème "Agir pour un environnement meilleur". Cette initiative était riche en activités éducatives.
+        Nous avons commencé par un nettoyage complet du jardin de l'école, en retirant les déchets et les mauvaises herbes et en taillant les arbres. Cette activité nous a permis de développer des valeurs précieuses telles que le travail collectif, la coopération et le sens des responsabilités envers la nature. Nous avons appris à protéger l'environnement commençant par des gestes simples, comme nettoyer un espace. Cette journée restera une expérience inspirante qui a renforcé notre conscience écologique et notre volonté de vivre dans un environnement plus beau et durable.
+        </p>
+        <div class= "tittle"><h3>Sohaila LYAZGHI</h3> </div>
+    </div>
+    
+
+    <div class="images">
+      <div class="image-card">
+        <img src="photo/sohaila.jpg" alt="صورة 1">
+      </div>
+      <div class="image-card">
+        <img src="photo/manal.jpg" alt="صورة 2">
+      </div>
+      <div class="image-card">
+        <img src="photo/loubna.jpg" alt="صورة 3">
+      </div>
+    </div>
+  </div>
+</body>
+</html>

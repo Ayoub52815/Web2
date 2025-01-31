@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>صور وتقارير</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #4e8dcc;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(to bottom, #003366, #006699);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      padding: 30px;
+      max-width: 1200px;
+      width: 80%;
+      text-align: center;
+      color: white;
+    }
+
+    .report {
+      margin-bottom: 40px;
+      max-width: 700px;
+      color: white;
+    }
+
+    .report h3 {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .report p {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #ffffff;
+    }
+
+    .images {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+    }
+
+    .image-card {
+      width: 250px;
+      height: 250px;
+      margin: 10px;
+      background: #006699;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .image-card:hover {
+      transform: scale(1.05);
+    }
+
+    .image-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="report">
+      <p style="text-align: justify;">« Esprit conscient…corps sain »
+        A l’occasion de la Journée mondiale contre le sida, le club Santé et Environnement a organisé une journée pour sensibiliser les élèves à l’épidémie de sida. Pour cela nous avons eu le plaisir d’inviter le vendredi 31 décembre 2024, dr. Najoua ElASKI, docteur en biologie et santé qui a éclairé et informé les élèves sur toutes les informations à connaître à propos du SIDA : Ses symptômes, la transmission du virus, les moyens de protection et de prévention, le traitement. Par la suite, une projection vidéo a été mise, destinée à éduquer les élèves en matière de VIH/sida suivi d’une mise en scène de deux pièces théâtrales intitulées « la Perte » et « Audience » joué par les membres de club Arts, Théâtre et Langues. À la fin de cette activité Dr.ELASKI distribuent des dépliants à chaque participant.
+        Nos sincères remerciements à Dr. ELASKI pour ses conseils précieux                
+        </p>
+        <div class= "tittle"><h3>Aya ELGHAYYATY</h3> </div>
+    </div>
+    
+
+    <div class="images">
+      <div class="image-card">
+        <img src="photo/faty.jpg" alt="صورة 1">
+      </div>
+      <div class="image-card">
+        <img src="photo/hurry.jpg" alt="صورة 2">
+      </div>
+      <div class="image-card">
+        <img src="photo/vih.jpg" alt="صورة 3">
+      </div>
+    </div>
+  </div>
+</body>
+</html>

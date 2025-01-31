@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A propos du Lycée</title>
+    <style>
+        /* تنسيق الصفحة الرئيسية */
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #054F80;
+            color: #333;
+            line-height: 1.6;
+            box-shadow: #ffffff;
+        }
+        /* رأس الصفحة */
+        
+        header {
+            background-color: #054F80;
+            /* أزرق مائل للأخضر */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            box-shadow: #181616;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+        
+        .home-button {
+            display: inline-block;
+            margin-top: 10px;
+            background-color: #063B63;
+            /* أزرق غامق */
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 15px;
+            font-size: 1rem;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        
+        .home-button:hover {
+            background-color: #1C5F8C;
+            /* أزرق أغمق */
+            transform: translateY(-3px);
+        }
+        /* قائمة الأخبار */
+        
+        .news-container {
+            max-width: 999px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .tooter {
+            text-align: center;
+            border-radius: 15px;
+            background-color: #1C5F8C;
+            padding: 10px;
+            color: #ffffff;
+        }
+        /* حاوية الصورة */
+        /* حاوية الصورة */
+        
+        .image-club {
+            display: flex;
+            flex-wrap: wrap;
+            /* لتوزيع الصور في أكثر من صف */
+            gap: 10px;
+            /* مساحة بين الصور */
+        }
+        /* الصورة نفسها */
+        
+        .image-club img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        /* إخفاء الـ checkbox */
+        
+        .image-toggle {
+            display: none;
+        }
+        /* عندما يكون الـ checkbox مفعلًا */
+        
+        .image-toggle:checked+img {
+            transform: scale(1.5);
+            /* تكبير الصورة */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            /* إضافة ظل أكبر عند التكبير */
+        }
+        
+        .news-item {
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 5px solid #3a7d91;
+            border-radius: 15px
+            /* نفس لون الرأس */
+        }
+        
+        .news-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .news-title {
+            font-size: 1.5rem;
+            color: #0a0a0aee;
+            margin-bottom: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .news-title a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+        
+        .news-title a:hover {
+            color: #28282b;
+            /* أخضر مائل للأزرق */
+        }
+        
+        .news-description {
+            margin-bottom: 10px;
+            color: #181616;
+            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        /* قدم الصفحة */
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>A propos du Lycée</h1>
+        <a href="home.html" class="home-button">Retourner a La page D'accueil</a>
+    </header>
+    <div class="news-container">
+        <div class="news-item">
+            <h2 class="news-title">A propos du Lycée</h2>
+
+            <p class="news-description">Le Lycée qualifiant Mohammed Zerktouni situé à la commune Jorf El Melha ; est un établissement public d’enseignement général, appartenant à l'académie Rabat-salé-Kenitra, direction provinciale de Sidi Kacem. Comme de nombreux autres établissements
+                scolaires du pays, Le Lycée porte le nom d’une personne emblématique de la résistance marocaine. En effet, Mohammed Zerktouni était reconnu pour son intelligence et son courage dans l'organisation d'opérations militaires. En outre, la
+                journée nationale de la résistance coïncidait avec l’anniversaire de sa mort le 18 juin. Notre lycée a une bonne réputation grâce à son corps administratif et éducatif qui opte pour une éducation inclusive et de qualité pour tous.
+            </p>
+            <div class="image-club">
+                <label>
+                    <input type="checkbox" class="image-toggle">
+                    <img src="photo/shool.JPG" alt="School">
+                </label>
+                <label>
+                    <input type="checkbox" class="image-toggle">
+                    <img src="photo/west-sa7a.JPG" alt="West Sa7a">
+                </label>
+                <label>
+                    <input type="checkbox" class="image-toggle">
+                    <img src="photo/bara.JPG" alt="Bara">
+                </label>
+                <label>
+                    <input type="checkbox" class="image-toggle">
+                    <img src="photo/sproot-sa7A.JPG" alt="Sproot Sa7A">
+                </label>
+                <label>
+                    <input type="checkbox" class="image-toggle">
+                    <img src="photo/coulwar-te7t.JPG" alt="Coulwar Te7t">
+                </label>
+                <label>
+                    <input type="checkbox" class="image-toggle">
+                    <img src="photo/coulwar_foo9.JPG" alt="Coulwar Foo9">
+                </label>
+                <label>
+                    <input type="checkbox" class="image-toggle">
+                    <img src="photo/sa7a-west.JPG" alt="Sa7a West">
+                </label>
+            </div>
+
+            <p class="tooter"> copyrith &copy; 2025 - Lycée Mohammed Ezzarktouni </p>
+        </div>

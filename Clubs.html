@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Clubs</title>
+    <style>
+        /* إعدادات الخطوط والألوان العامة */
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #073c72;
+            color: #000000;
+        }
+        /* تصميم الهيدر */
+        
+        .header {
+            background: linear-gradient(145deg, #3B759B, #062645);
+            color: rgb(255, 255, 255);
+            padding: 50px 20px;
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header span {
+            font-size: 18px;
+            display: block;
+            margin-top: 10px;
+            color: #d9e9ff;
+        }
+        /* الحاوية الرئيسية */
+        
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background: linear-gradient(145deg, #cfcdcd, #ffffff);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+        }
+        /* تصميم كل نادي */
+        
+        .club {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 20px 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            border-radius: 15px;
+        }
+        
+        .club:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.219);
+        }
+        
+        .club:last-child {
+            border-bottom: none;
+        }
+        /* الصورة الخاصة بكل نادي */
+        
+        .club img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        /* معلومات النادي */
+        
+        .club-content {
+            flex: 1;
+        }
+        
+        .club-content h2 {
+            font-size: 30px;
+            margin: 0;
+            color: #38312dea;
+            transition: color 0.3s ease;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            border-radius: 15px;
+        }
+        
+        .club-content h2:hover {
+            color: #242121;
+        }
+        
+        .club-content p {
+            font-size: 16px;
+            color: #3f3c35;
+            line-height: 1.8;
+            margin: 10px 0;
+            font-family: sans-serif;
+            border-radius: 15px;
+        }
+        
+        .club-content .category {
+            display: inline-block;
+            margin-top: 5px;
+            font-size: 14px;
+            color: #fff;
+            background-color: #0073e6;
+            padding: 5px 10px;
+            border-radius: 5px;
+            border-radius: 15px;
+        }
+        /* زر "اكتشف المزيد" */
+        
+        .club-content a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 25px;
+            background: linear-gradient(145deg, #3061ca, #0073e6);
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 25px;
+            transition: background 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            border-radius: 15px;
+        }
+        
+        .club-content a:hover {
+            background: linear-gradient(145deg, #003d80, #0056b3);
+            transform: translateY(-3px);
+            border-radius: 15px;
+        }
+        /* التصميم المتجاوب */
+        
+        @media (max-width: 768px) {
+            .club {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+            }
+            .club img {
+                width: 100px;
+                height: 100px;
+            }
+            .club-content h2 {
+                font-size: 20px;
+            }
+            .club-content p {
+                font-size: 14px;
+            }
+            .club-content a {
+                padding: 8px 20px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        Explorez Les Clubs de Notre Lycée
+        <span>Tous Les Clubs Du Lycée et leurs classifications</span>
+    </div>
+
+    <div class="container">
+        <div class="club">
+            <img src="photo/Healt_logo.jpg.png" alt="نادي الصحة">
+            <div class="club-content">
+                <h2>Club Santé et Environnement</h2>
+                <p>Le Club santé et environnement scolaire vise à sensibiliser les élèves à promouvoir des habitudes saines et des pratique durables à travers des activités éducatives et communautaires , afin de favoriser le bien-etre individuel
+                    et la protection de notre planète </p>
+                <span class="category">Environnement</span>
+
+                <a href="santé-envirennement.html">En Savoir Plus</a>
+            </div>
+        </div>
+
+        <div class="club">
+            <img src="photo/Art-logo.jpg" alt="نادي الفنون و اللغة">
+            <div class="club-content">
+                <h2>Club Arts, théâtre et langue</h2>
+                <p>Le Club Arts & Langues est un espace créatif où les élèves explorent l'art et améliorent leurs compétences linguistiques à travers des ateliers, des projets collaboratifs et des événements culturels, célébrant ainsi la diversité et l'expression
+                    personnelle
+                </p>
+                <span class="category">Art</span>
+                <a href="téathre.html">En Savoir Plus</a>
+            </div>
+        </div>
+
+        <div class="club">
+            <img src="photo/Orientation-logo.jpg" alt="نادي التوجيه">
+            <div class="club-content">
+                <h2>Club Orientation et Métiers</h2>
+                <p>Le Club Orientation et Métiers aide les élèves à explorer leurs passions et à découvrir diverses carrières à travers des ateliers, des rencontres avec des professionnels et des visites d'entreprises, afin de les préparer à un avenir professionnel
+                    éclairé.
+                </p>
+                <span class="category">Orientation</span>
+                <a href="orientation et métiers.html">En Savoir Plus</a>
+            </div>
+        </div>
+
+        <div class="club">
+            <img src="photo/Information-logo.jpg" alt="نادي الصحافة">
+            <div class="club-content">
+                <h2>Club Informatique</h2>
+                <p>Le Club informatique est un espace dédie aux éléves passionnés par la technologie offrant des ateliers pratiques des projets de programmation et des compétitions de codage pour développer leurs compétences numériques tout en s'amusant.
+                </p>
+                <span class="category">Communication</span>
+                <a href="club-informatique.html">En Savoir Plus</a>
+            </div>
+        </div>
+</body>
+
+</html>
